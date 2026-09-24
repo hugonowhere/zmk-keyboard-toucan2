@@ -1006,7 +1006,7 @@
         forward: forward {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(F) &kp LC(O)>;
+            bindings = <&kp LALT &kp L &kp F &kp T>;
             label = "FORWARD";
         };
 
