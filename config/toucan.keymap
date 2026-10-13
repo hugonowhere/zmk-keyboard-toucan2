@@ -1091,7 +1091,7 @@
         TRCK {
             display-name = "TPAD";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LGUI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ALT  &trans  &kp LCTRL  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LGUI  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ALT  &trans  &kp LCTRL  &kp RCTRL  &trans  &trans
             >;
         };
 
