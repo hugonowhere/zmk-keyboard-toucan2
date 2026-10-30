@@ -260,8 +260,8 @@
             key-positions = <0 11>;
         };
 
-        keyPass {
-            bindings = <&kp LA(LC(Q))>;
+        codeNum {
+            bindings = <&CodeNum>;
             key-positions = <19 20 21 39>;
             layers = <0>;
         };
@@ -1076,6 +1076,13 @@
 
             label = "INBOX2";
         };
+
+        CodeNum: CodeNum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_6 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_7>;
+            label = "CODENUM";
+        };
     };
 
     keymap {
@@ -1084,7 +1091,7 @@
         BASE {
             display-name = "BASE";
             bindings = <
-&htfast RA(N3) RA(N0)  &as LS(B) B  &ht_eaigu 0 N2  &as LS(P) P  &as LS(O) O  &ht_egrave 0 N7  &as LS(LBKT) LBKT  &as LS(V) V  &as LS(D) D  &as LS(L) L  &as LS(J) J  &as LS(Z) Z  &ht_aaigu 0 N0  &ass LS(Q) Q  &ass LS(U) U  &as LS(I) I  &as LS(E) E  &htfast LS(MINUS) N4  &as LS(C) C  &as LS(T) T  &as LS(S) S  &as LS(R) R  &as LS(N) N  &as LS(SEMI) SEMI  &morph_Uaigu  &as LS(X) X  &as LS(W) W  &as LS(Y) Y  &td_virgule  &td_point  &ht_ccedille 0 N9  &as LS(A) A  &as LS(G) G  &as LS(H) H  &as LS(F) F  &as LS(K) K  &htmolayer 4 ESC  &htmolayer 2 TAB  &hth LCTRL ENTER  &htmolayer 3 ENTER  &htmolayer 2 SPACE  &htfast LC(BACKSPACE) BACKSPACE
+&htfast (RA(N3)) RA(N0)  &as LS(B) B  &ht_eaigu 0 N2  &as LS(P) P  &as LS(O) O  &ht_egrave 0 N7  &as LS(LBKT) LBKT  &as LS(V) V  &as LS(D) D  &as LS(L) L  &as LS(J) J  &as LS(Z) Z  &ht_aaigu 0 N0  &ass LS(Q) Q  &ass LS(U) U  &as LS(I) I  &as LS(E) E  &htfast LS(MINUS) N4  &as LS(C) C  &as LS(T) T  &as LS(S) S  &as LS(R) R  &as LS(N) N  &as LS(SEMI) SEMI  &morph_Uaigu  &as LS(X) X  &as LS(W) W  &as LS(Y) Y  &td_virgule  &td_point  &ht_ccedille 0 N9  &as LS(A) A  &as LS(G) G  &as LS(H) H  &as LS(F) F  &as LS(K) K  &htmolayer 4 ESC  &htmolayer 2 TAB  &hth LCTRL ENTER  &htmolayer 3 ENTER  &htmolayer 2 SPACE  &htfast LC(BACKSPACE) BACKSPACE
             >;
         };
 
@@ -1098,21 +1105,21 @@
         NAV {
             display-name = "NAV";
             bindings = <
-&none  &none  &figer_volet  &ht_filter 0 0  &Trier  &ht_table_tcd 0 0  &kp PG_UP  &kp HOME  &kp UP  &kp END  &none  &none  &outbox  &none  &swapper  &Si  &rechercheX  &Nbsi  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &kp LGUI  &kp LC(N1)  &ht_date_std 0 0  &ht_bordure 0 0  &td_rempl_cel  &td_rempl_line  &kp LG(N3)  &kp RG(N4)  &kp LG(N5)  &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LEFT_ALT  &hth LSHIFT LS(TAB)  &hth LCTRL ENTER  &kp LS(RET)  &kp LS(SPACE)  &htfast LC(DELETE) DELETE
+&none  &none  &figer_volet  &ht_filter 0 0  &Trier  &ht_table_tcd 0 0  &kp PG_UP  &kp HOME  &kp UP  &kp END  &none  &none  &outbox  &none  &swapper  &Si  &rechercheX  &Nbsi  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &kp LGUI  &kp LC(N1)  &ht_date_std 0 0  &ht_bordure 0 0  &td_rempl_cel  &td_rempl_line  &kp LG(N3)  &kp RG(N4)  &kp LG(N5)  &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LEFT_ALT  &hth (LSHIFT) LS(TAB)  &hth LCTRL ENTER  &kp LS(RET)  &kp LS(SPACE)  &htfast LC(DELETE) DELETE
             >;
         };
 
         NUM {
             display-name = "NUM";
             bindings = <
-&none  &none  &kp F7  &kp F8  &kp F9  &kp F12  &hth RA(N8) LS(DOT)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp RA(N6)  &kp KP_NUM  &none  &none  &kp F4  &kp F5  &kp F6  &kp F11  &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_N5  &kp KP_N6  &htfast RIGHT_BRACKET RA(E)  &kp LC(PAUSE_BREAK)  &kp LGUI  &none  &kp F1  &kp F2  &kp F3  &kp F10  &kp LS(EQUAL)  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp LS(SQT)  &kp LC(LA(DELETE))  &kp LEFT_ALT  &hth LS(LC(TAB)) LC(TAB)  &hth LCTRL ENTER  &trans  &kp KP_DOT  &kp LS(N0)
+&none  &none  &kp F7  &kp F8  &kp F9  &kp F12  &hth (RA(N8)) LS(DOT)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp RA(N6)  &kp KP_NUM  &none  &none  &kp F4  &kp F5  &kp F6  &kp F11  &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_N5  &kp KP_N6  &htfast (RIGHT_BRACKET) RA(E)  &kp LC(PAUSE_BREAK)  &kp LGUI  &none  &kp F1  &kp F2  &kp F3  &kp F10  &kp LS(EQUAL)  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp LS(SQT)  &kp LC(LA(DELETE))  &kp LEFT_ALT  &hth (LS(LC(TAB))) LC(TAB)  &hth LCTRL ENTER  &trans  &kp KP_DOT  &kp LS(N0)
             >;
         };
 
         COMM {
             display-name = "COMM";
             bindings = <
-&studio_unlock  &none  &none  &kp LG(N1)  &kp LC(N1)  &kp LC(LS(F))  &kp F3  &inbox2  &inbox  &none  &bt BT_SEL 0  &bt BT_SEL 1  &none  &none  &swapperRD  &kp LC(N)  &kp LC(N2)  &kp LA(LS(O))  &mc_attach  &outbox  &ht_reply 0 0  &forward  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none  &none  &teams_mic  &TeamsCal  &kp LC(N4)  &none  &htfast LC(N2) LC(N1)  &none  &none  &bt BT_SEL 4  &bt BT_CLR  &none  &none  &none  &kp LA(ENTER)  &kp LA(SPACE)  &kp LWIN
+&studio_unlock  &none  &none  &kp LG(N1)  &kp LC(N1)  &kp LC(LS(F))  &kp F3  &inbox2  &inbox  &none  &bt BT_SEL 0  &bt BT_SEL 1  &none  &none  &swapperRD  &kp LC(N)  &kp LC(N2)  &kp LA(LS(O))  &mc_attach  &outbox  &ht_reply 0 0  &forward  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none  &none  &teams_mic  &TeamsCal  &kp LC(N4)  &none  &htfast (LC(N2)) LC(N1)  &none  &none  &bt BT_SEL 4  &bt BT_CLR  &none  &none  &none  &kp LA(ENTER)  &kp LA(SPACE)  &kp LWIN
             >;
         };
     };
